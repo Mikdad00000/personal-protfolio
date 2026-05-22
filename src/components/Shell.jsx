@@ -85,7 +85,7 @@ function PortfolioControls({ prefs, setPrefs }) {
       </button>
 
       {open && (
-        <div role="dialog" style={{
+        <div role="dialog" className="controls-popover" style={{
           position: "absolute", top: "calc(100% + 8px)", right: 0, width: 320,
           background: "var(--bg-elev)", border: "1px solid var(--border-strong)",
           borderRadius: 10, boxShadow: "0 16px 48px rgba(0,0,0,0.45)", zIndex: 60,
