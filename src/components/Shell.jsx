@@ -187,9 +187,9 @@ export function Shell({ active, onJump, prefs, setPrefs }) {
           <span style={{ color: "var(--text-muted)" }}>main</span>
           <span style={{ color: "var(--accent)" }}>●</span>
         </div>
-        <div className="shell-meta" style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <span style={{ color: "var(--text-dim)" }}>UTC+6 · Dhaka</span>
-          <span className="pill"><span className="dot" />open to opportunities</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <span className="shell-meta" style={{ color: "var(--text-dim)" }}>UTC+6 · Dhaka</span>
+          <span className="shell-meta pill"><span className="dot" />open to opportunities</span>
           <PortfolioControls prefs={prefs} setPrefs={setPrefs} />
         </div>
       </div>
