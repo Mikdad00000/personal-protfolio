@@ -127,7 +127,7 @@ export function Projects() {
               </div>
             </div>
 
-            <div style={{ padding: "32px 26px", background: "var(--bg)" }}>
+            <div className="proj-sidebar" style={{ padding: "32px 26px", background: "var(--bg)" }}>
               <div className="comment" style={{ marginBottom: 14 }}>// EXPLORER</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 4, fontFamily: "var(--font-mono)", fontSize: 12.5 }}>
                 {PROJECTS.map(p => {

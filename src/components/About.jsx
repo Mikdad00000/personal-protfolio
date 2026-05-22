@@ -37,27 +37,28 @@ export function About() {
             </div>
           </div>
 
-          <CodeBlock filename="me.json" lang="json" style={{ position: "sticky", top: 110 }}>
-            <span><Token type="dim">{"{"}</Token></span>{"\n"}
-            <span>  <Token type="prop">"name"</Token><Token type="dim">: </Token><Token type="string">"Mikdad Rahman"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>  <Token type="prop">"role"</Token><Token type="dim">: </Token><Token type="string">"Software Engineer"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>  <Token type="prop">"company"</Token><Token type="dim">: </Token><Token type="string">"PACGEM"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>  <Token type="prop">"location"</Token><Token type="dim">: </Token><Token type="string">"Dhaka, Bangladesh"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>  <Token type="prop">"focus"</Token><Token type="dim">: [</Token></span>{"\n"}
-            <span>    <Token type="string">"full-stack systems"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>    <Token type="string">"llm-integrated products"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>    <Token type="string">"data at scale"</Token></span>{"\n"}
-            <span>  <Token type="dim">],</Token></span>{"\n"}
-            <span>  <Token type="prop">"superpowers"</Token><Token type="dim">: [</Token></span>{"\n"}
-            <span>    <Token type="string">"shipping fast w/ ai"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>    <Token type="string">"query optimization"</Token><Token type="dim">,</Token></span>{"\n"}
-            <span>    <Token type="string">"system architecture"</Token></span>{"\n"}
-            <span>  <Token type="dim">],</Token></span>{"\n"}
-            <span>  <Token type="prop">"available"</Token><Token type="dim">: </Token><span style={{ color: "var(--accent)" }}>true</span></span>{"\n"}
-            <span><Token type="dim">{"}"}</Token></span>
-          </CodeBlock>
+          <div className="about-codeblock" style={{ position: "sticky", top: 110 }}>
+            <CodeBlock filename="me.json" lang="json">
+              <span><Token type="dim">{"{"}</Token></span>{"\n"}
+              <span>  <Token type="prop">"name"</Token><Token type="dim">: </Token><Token type="string">"Mikdad Rahman"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>  <Token type="prop">"role"</Token><Token type="dim">: </Token><Token type="string">"Software Engineer"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>  <Token type="prop">"company"</Token><Token type="dim">: </Token><Token type="string">"PACGEM"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>  <Token type="prop">"location"</Token><Token type="dim">: </Token><Token type="string">"Dhaka, Bangladesh"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>  <Token type="prop">"focus"</Token><Token type="dim">: [</Token></span>{"\n"}
+              <span>    <Token type="string">"full-stack systems"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>    <Token type="string">"llm-integrated products"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>    <Token type="string">"data at scale"</Token></span>{"\n"}
+              <span>  <Token type="dim">],</Token></span>{"\n"}
+              <span>  <Token type="prop">"superpowers"</Token><Token type="dim">: [</Token></span>{"\n"}
+              <span>    <Token type="string">"shipping fast w/ ai"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>    <Token type="string">"query optimization"</Token><Token type="dim">,</Token></span>{"\n"}
+              <span>    <Token type="string">"system architecture"</Token></span>{"\n"}
+              <span>  <Token type="dim">],</Token></span>{"\n"}
+              <span>  <Token type="prop">"available"</Token><Token type="dim">: </Token><span style={{ color: "var(--accent)" }}>true</span></span>{"\n"}
+              <span><Token type="dim">{"}"}</Token></span>
+            </CodeBlock>
+          </div>
         </div>
-        <style>{`@media(max-width:900px){.about-grid{grid-template-columns:1fr !important;}}`}</style>
       </div>
     </section>
   )

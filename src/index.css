@@ -187,3 +187,22 @@ body[data-rain="off"] .code-rain { display: none; }
 *:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 .divider { height: 1px; background: var(--border); }
 .comment { font-family: var(--font-mono); color: var(--tok-comment); font-size: 13px; }
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 860px) {
+  .hero-top { grid-template-columns: 1fr !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .about-codeblock { position: static !important; }
+  .proj-grid { grid-template-columns: 1fr !important; }
+  .proj-sidebar { display: none; }
+  .shell-meta { display: none !important; }
+}
+
+@media (max-width: 600px) {
+  :root { --gap-section: 4rem; }
+  .container { padding: 0 16px; }
+  .section-title { font-size: clamp(28px, 8vw, 44px); }
+  .hero-top { gap: 16px !important; }
+  .about-grid { gap: 24px !important; }
+  section[id] { scroll-margin-top: 56px; }
+}
