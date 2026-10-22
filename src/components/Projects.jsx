@@ -4,6 +4,58 @@ import { SectionHeader } from './Shell'
 
 const PROJECTS = [
   {
+    id: "ai-concierge", file: "ai-concierge.java",
+    title: "AI Guest Concierge", subtitle: "Multi-channel AI assistant · WhatsApp · Instagram · Messenger",
+    role: "Software engineer",
+    blurb: "Multi-channel AI concierge for a resort, with human hand-off through Chatwoot and a PWA admin console. A multi-provider LLM router with fallback, a code-level guardrail chain and versioned, auditable prompts keep answers safe in production.",
+    highlights: [
+      { k: "llm_router", v: "Google · Anthropic · Ollama (Llama) with fallback + A/B analytics" },
+      { k: "guardrails", v: "off-topic · competitor · language · PII · abstain" },
+      { k: "evals", v: "promptfoo pre-deploy gate + flag-to-regression loop" },
+    ],
+    stack: ["Spring Boot 3.4","Java 21","PostgreSQL","Chatwoot","promptfoo","Playwright"],
+    accent: "var(--accent)"
+  },
+  {
+    id: "dpp", file: "product-passport.ts",
+    title: "Digital Product Passport", subtitle: "EU ESPR regulation · Multi-tenant · GS1 Digital Link",
+    role: "Software engineer",
+    blurb: "Multi-tenant platform issuing serialised GS1 Digital Link identifiers with QR/NFC carriers and a public/restricted resolver, plus a supply-chain console with an append-only edit log. Tenant isolation and hashed API-key auth by default.",
+    highlights: [
+      { k: "issuance", v: "atomic, idempotent high-volume batch issuance" },
+      { k: "carriers", v: "QR/NFC with encode-and-verify states" },
+      { k: "traceability", v: "EPCIS-style events with custody-gap detection" },
+    ],
+    stack: ["Node 20","TypeScript","Express","Prisma","PostgreSQL 16"],
+    accent: "var(--info)"
+  },
+  {
+    id: "resort", file: "resort-platform.java",
+    title: "Resort Management Platform", subtitle: "Enterprise operations · Staff web app + guest PWA",
+    role: "Contributor",
+    blurb: "Large production platform running resort operations: bookings, payments, accounting, payroll, attendance, inventory and guest services. Built its real-time AI guest voice assistant, AI smart-fill for bookings and public room booking with bKash deposits.",
+    highlights: [
+      { k: "ai_voice", v: "real-time voice assistant: ephemeral tokens, tool catalogue, kill switch" },
+      { k: "payments", v: "bKash deposits with price-integrity + double-charge guards" },
+      { k: "security", v: "RBAC, rate-limited guest login, callback hardening" },
+    ],
+    stack: ["Spring Boot 3.4","Java 21","Angular 20","PostgreSQL 16","Flyway","PWA"],
+    accent: "var(--warn)"
+  },
+  {
+    id: "po-automation", file: "po-automation.java",
+    title: "Purchase-Order Automation", subtitle: "Retailer PO PDFs → print-ready barcode labels",
+    role: "Led development",
+    blurb: "Parses retailer purchase-order PDFs in several layouts into transit-sticker records and renders print-ready barcode labels. Draft/edit/send-back workflow, per-organisation settings, subscriptions and a unified error contract.",
+    highlights: [
+      { k: "parsing", v: "multi-layout PO PDFs -> sticker records" },
+      { k: "labels", v: "JasperReports barcodes, ISO/IEC 15416 print grading" },
+      { k: "delivery", v: "deploy scripts + Playwright-recorded user guide" },
+    ],
+    stack: ["Spring Boot 3.5","Java 21","Angular 19","PostgreSQL","JasperReports","PDFBox"],
+    accent: "#f472b6"
+  },
+  {
     id: "ai-factory", file: "ai-software-factory.tsx",
     title: "AI Software Factory", subtitle: "Chat-first SaaS for SMEs · Multi-tenant",
     role: "Lead engineer",
@@ -72,7 +124,7 @@ export function Projects() {
         />
 
         <div className="card" style={{ overflow: "hidden", background: "var(--bg-elev)" }}>
-          <div style={{ display: "flex", overflow: "auto", borderBottom: "1px solid var(--border)", background: "var(--bg-elev-2)" }}>
+          <div className="tab-strip" style={{ display: "flex", overflow: "auto", borderBottom: "1px solid var(--border)", background: "var(--bg-elev-2)" }}>
             {PROJECTS.map(p => {
               const isActive = p.id === active
               return (

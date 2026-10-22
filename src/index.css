@@ -229,3 +229,9 @@ body[data-rain="off"] .code-rain { display: none; }
   .about-grid { gap: 24px !important; }
   section[id] { scroll-margin-top: 56px; }
 }
+
+/* Project tab strip: thin, theme-coloured scrollbar when tabs overflow */
+.tab-strip { scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+.tab-strip::-webkit-scrollbar { height: 4px; }
+.tab-strip::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+.tab-strip::-webkit-scrollbar-track { background: transparent; }

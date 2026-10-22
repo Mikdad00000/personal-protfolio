@@ -6,13 +6,13 @@ const COMMITS = [
     hash: "9f2c1ab", branch: "main", ref: "HEAD",
     role: "Software Engineer", company: "PACGEM",
     date: "Oct 2025 – present", location: "Dhaka, BD",
-    stack: ["React.js","Spring Boot","Angular 17","PostgreSQL","JWT","Docker"],
+    stack: ["Java 21","Spring Boot 3","Node.js","TypeScript","Angular","React","PostgreSQL","LLM APIs"],
     bullets: [
-      "Architected 9-module Account Management System (React + PostgreSQL) serving 100+ users at 99.9% uptime.",
-      "Integrated Claude and OpenAI APIs — automated boilerplate, unit tests, and documentation, cutting repetitive work ~40%.",
-      "Implemented cost and rate-limit management strategies for LLM API usage across multiple projects.",
-      "Built secure APIs handling 10,000+ daily requests (<200ms avg); Docker CI/CD cut deploy time from 2h to 15min.",
-      "Mentored junior developers on AI-augmented practices and conducted regular code reviews."
+      "Own full-stack delivery across several client-facing and internal products, from spec to deployment.",
+      "Built a multi-channel AI guest concierge (WhatsApp, Instagram, Messenger) with a multi-provider LLM router, guardrail chain and promptfoo eval gate.",
+      "Built a multi-tenant EU ESPR Digital Product Passport platform (Node, TypeScript, Prisma) with GS1 Digital Link identifiers.",
+      "Contributed to a production resort platform: real-time AI voice assistant, bKash deposit booking, RBAC.",
+      "Led a purchase-order automation system turning retailer PDFs into print-ready barcode labels; built an account management system with P&L / tax reporting."
     ],
     current: true
   },
